@@ -1,0 +1,12 @@
+export default CATEGORIES = [
+  "MATH",
+  "PHYSICS",
+  "CHEMISTRY",
+  "BIOLOGY",
+  "ENGLISH",
+  "HISTORY",
+  "GEOGRAPHY",
+  "ECONOMICS",
+  "LITERATURE",
+  "OTHERS",
+]
