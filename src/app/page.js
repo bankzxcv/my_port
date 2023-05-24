@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 
 import { Alert } from "flowbite-react"
+import EDUS from "./constants/edus"
 import EXPS from "./constants/exps"
 
 export default function Home() {
@@ -36,8 +37,8 @@ export default function Home() {
           <div className="text-6xl font-bold">Hello</div>
           <div className="flex mt-8">
             <div className="w-[50%] lg:max-w-[50%] flex items-center justify-center">Profile</div>
-            <div className="text-2xl lg:max-w-[50%] whitespace-pre whitespace-pre-line">
-              \tHello! I am Jirayu Saengwannakool, also known as Bank. Specializing in backend
+            <div className="text-2xl lg:max-w-[50%] text-gray-700">
+              Hello! I am Jirayu Saengwannakool, also known as Bank. Specializing in backend
               development, I leverage Node.js and MongoDB to create robust, efficient solutions.
               Recently, I ave been practicing my skills, interesting in skills in Full Stack
               development to extend my expertise into frontend development with React and Tailwind
@@ -50,7 +51,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center my-16">
           <div className="text-6xl font-bold mb-8">Experiences</div>
           <div>
-            <ol class="relative border-l border-gray-200 dark:border-gray-700 divide-y">
+            <ol className="relative border-l border-gray-200 dark:border-gray-700 divide-y">
               {EXPS.map(({ date, title, company, description }, i) => (
                 <li className="mb-10 ml-4 pt-6" key={i}>
                   <div className="absolute w-3 h-3 bg-gray-200 hover:bg-gray-800 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
@@ -63,7 +64,7 @@ export default function Home() {
                       at {company}
                     </h4>
                   </div>
-                  <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 whitespace-pre-line">
+                  <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 whitespace-pre-line">
                     {description}
                   </p>
                 </li>
@@ -76,28 +77,51 @@ export default function Home() {
           <div className="divide-y">
             <div className="text-2xl flex flex-row my-2">
               <div className="font-bold mx-2">Tech Skills:</div>
-              <div>
-                Node.js, MongoDB, Docker, ElasticSearch, RabbitMQ, React, Svelte, TCP/IP, Network
-                Engineering, Linux
+              <div className="mx-4" />
+              <div className="text-gray-700">
+                Node.js, MongoDB, Docker, ElasticSearch, RabbitMQ, React, Svelte, TCP/IP,
+                CCNA(Network and Data Center), Network Engineering, Linux
               </div>
             </div>
             <div className="text-2xl flex flex-row my-2">
               <div className="font-bold mx-2">Soft Skills:</div>
-              <div>
+              <div className="mx-4" />
+              <div className="text-gray-700">
                 Agile, Scrum, Kanban, Teamwork, Communication, Problem Solving, Time Management
               </div>
             </div>
             <div className="text-2xl flex flex-row my-2">
               <div className="font-bold mx-2">HOBBIES:</div>
-              <div>Working Out, JP Anime, Korean TV Series, American TV Series, Cooking</div>
+              <div className="mx-4" />
+              <div className="text-gray-700">
+                Working Out, JP Anime, Korean TV Series, American TV Series, Cooking
+              </div>
             </div>
           </div>
         </div>
         <div className="flex flex-col items-center justify-center my-16">
           <div className="text-6xl font-bold mb-8">Education</div>
-          <div className="text-2xl">
-            I am pursuing a graduate master program in Computer Science at Oregon State University
-          </div>
+          <ol className="relative border-l border-gray-200 dark:border-gray-700 divide-y">
+            {EDUS.map(({ date, department, school, description }, i) => (
+              <li className="mb-10 ml-4 pt-6" key={i}>
+                <div className="absolute w-3 h-3 bg-gray-200 hover:bg-gray-800 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                <time className="mb-1 text-sm font-normal leading-none text-gray-600 dark:text-gray-500">
+                  {date}
+                </time>
+                <div className="flex flex-col">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    {department}
+                  </h3>
+                  <h4 className="text-lg font-semibold text-gray-600 dark:text-white italic">
+                    at {school}
+                  </h4>
+                </div>
+                <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 whitespace-pre-line">
+                  {description}
+                </p>
+              </li>
+            ))}
+          </ol>
         </div>
 
         {/* <div className="flex flex-col items-center justify-center my-16">
