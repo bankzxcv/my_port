@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from "react"
 
+import { Alert } from "flowbite-react"
+import EXPS from "./constants/exps"
+
 export default function Home() {
   const [openMenu, setOpenMenu] = useState(false)
   return (
@@ -10,25 +13,10 @@ export default function Home() {
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <span className="font-semibold text-xl tracking-tight">Portfolio</span>
         </div>
-        {/* <div className="block lg:hidden">
-          <button
-            className="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white"
-            onClick={() => setOpenMenu(!openMenu)}
-          >
-            <svg
-              className="fill-current h-3 w-3"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            </svg>
-          </button>
-        </div> */}
-        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
           <div className="lg:flex-grow"></div>
           <div className="text-sm lg:flex-grow lg:flex min-[320]:flex-col">
-            {["Home", "Experiences", "Education", "Projects", "Contact"].map(item => {
+            {["Home", "Experiences", "Skills", "Education", "Projects", "Contact"].map(item => {
               const link = `#${item.toLowerCase()}`
               return (
                 <a
@@ -48,10 +36,10 @@ export default function Home() {
           <div className="text-6xl font-bold">Hello</div>
           <div className="flex mt-8">
             <div className="w-[50%] lg:max-w-[50%] flex items-center justify-center">Profile</div>
-            <div className="text-2xl lg:max-w-[50%]">
-              Hello! I'm Jirayu Saengwannakool, also known as Bank. Specializing in backend
+            <div className="text-2xl lg:max-w-[50%] whitespace-pre whitespace-pre-line">
+              \tHello! I am Jirayu Saengwannakool, also known as Bank. Specializing in backend
               development, I leverage Node.js and MongoDB to create robust, efficient solutions.
-              Recently, I've been practicing my skills, interesting in skills in Full Stack
+              Recently, I ave been practicing my skills, interesting in skills in Full Stack
               development to extend my expertise into frontend development with React and Tailwind
               CSS. Join me on my journey as I continue to push the boundaries of my technical
               knowledge and skillset.
@@ -61,12 +49,47 @@ export default function Home() {
 
         <div className="flex flex-col items-center justify-center my-16">
           <div className="text-6xl font-bold mb-8">Experiences</div>
-          <div className>
-            <div className="text-2xl">
-              I was a Backend Software Engineer @ZANROO Company (Thailand)
+          <div>
+            <ol class="relative border-l border-gray-200 dark:border-gray-700 divide-y">
+              {EXPS.map(({ date, title, company, description }, i) => (
+                <li className="mb-10 ml-4 pt-6" key={i}>
+                  <div className="absolute w-3 h-3 bg-gray-200 hover:bg-gray-800 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                  <time className="mb-1 text-sm font-normal leading-none text-gray-600 dark:text-gray-500">
+                    {date}
+                  </time>
+                  <div className="flex flex-col">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{title}</h3>
+                    <h4 className="text-lg font-semibold text-gray-600 dark:text-white italic">
+                      at {company}
+                    </h4>
+                  </div>
+                  <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 whitespace-pre-line">
+                    {description}
+                  </p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center my-16">
+          <div className="text-6xl font-bold mb-8">Skills</div>
+          <div className="divide-y">
+            <div className="text-2xl flex flex-row my-2">
+              <div className="font-bold mx-2">Tech Skills:</div>
+              <div>
+                Node.js, MongoDB, Docker, ElasticSearch, RabbitMQ, React, Svelte, TCP/IP, Network
+                Engineering, Linux
+              </div>
             </div>
-            <div className="text-2xl">
-              I was a System and Network Engineer @Metro System Corporation Limited LTD (Thailand)
+            <div className="text-2xl flex flex-row my-2">
+              <div className="font-bold mx-2">Soft Skills:</div>
+              <div>
+                Agile, Scrum, Kanban, Teamwork, Communication, Problem Solving, Time Management
+              </div>
+            </div>
+            <div className="text-2xl flex flex-row my-2">
+              <div className="font-bold mx-2">HOBBIES:</div>
+              <div>Working Out, JP Anime, Korean TV Series, American TV Series, Cooking</div>
             </div>
           </div>
         </div>
@@ -77,16 +100,20 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center my-16">
+        {/* <div className="flex flex-col items-center justify-center my-16">
           <div className="text-6xl font-bold mb-8">Projects</div>
-          <div className="text-2xl">I'm a software engineer</div>
-        </div>
+          <div className="text-2xl">I am a software engineer</div>
+        </div> */}
         <div className="flex flex-col items-center justify-center my-16">
           <div className="text-6xl font-bold mb-8">Contact</div>
-          <div className="text-2xl">Blog: xxx</div>
-          <div className="text-2xl">Github: xxx</div>
+          <div className="flex flex-col justify-center my-4">
+            <div className="text-2xl">Blog: https://medium.com/@bankzxcv (Thai Blog)</div>
+            <div className="text-2xl">Github: https://github.com/bankzxcv</div>
+            <div className="text-2xl">Email: jirayu.saeng@gmail.com</div>
+          </div>
         </div>
       </div>
+      <div>FOOTER</div>
     </main>
   )
 }
