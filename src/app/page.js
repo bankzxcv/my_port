@@ -152,9 +152,13 @@ export default function Home() {
           <div id="contact" className="text-6xl font-bold mb-8">
             Contact
           </div>
-          <div className="flex flex-col justify-center my-4">
-            <div className="text-2xl">Blog: https://medium.com/@bankzxcv (Thai Blog)</div>
-            <div className="text-2xl">Github: https://github.com/bankzxcv</div>
+          <div className="flex flex-col justify-center items-center my-4">
+            <div className="text-2xl">
+              <a href="https://medium.com/@bankzxcv">Medium Blog (Thai Content)</a>
+            </div>
+            <div className="text-2xl">
+              <a href="https://github.com/bankzxcv">Github</a>
+            </div>
             <div className="text-2xl">Email: jirayu.saeng@gmail.com</div>
           </div>
         </div>
