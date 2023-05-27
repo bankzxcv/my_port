@@ -11,7 +11,7 @@ const EDUS = [
   {
     date: "May 2010 - 2013",
     department: "Bachelor's degree, COMPUTER ENGINEERING",
-    school: "Oregon State University",
+    school: "Khon Kaen University",
     description: `Web Services
     Classes: Micro Controller, Web Services (API), Computer Network
     - Attending to ACM ICPC Natioanal Contest in 2011-2013 Thailand

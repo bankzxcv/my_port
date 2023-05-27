@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import { Alert } from "flowbite-react"
 import EDUS from "./constants/edus"
 import EXPS from "./constants/exps"
+import Image from "next/image"
 
 export default function Home() {
   const [openMenu, setOpenMenu] = useState(false)
@@ -35,15 +36,19 @@ export default function Home() {
       <div className="flex flex-col items-center mx-24">
         <div className="flex flex-col items-center justify-center my-16">
           <div className="text-6xl font-bold">Hello</div>
-          <div className="flex mt-8">
-            <div className="w-[50%] lg:max-w-[50%] flex items-center justify-center">Profile</div>
-            <div className="text-2xl lg:max-w-[50%] text-gray-700">
-              Hello! I am Jirayu Saengwannakool, also known as Bank. Specializing in backend
-              development, I leverage Node.js and MongoDB to create robust, efficient solutions.
-              Recently, I ave been practicing my skills, interesting in skills in Full Stack
-              development to extend my expertise into frontend development with React and Tailwind
-              CSS. Join me on my journey as I continue to push the boundaries of my technical
-              knowledge and skillset.
+          <div className="mt-8 flex flex-col md:flex-row justify-between p-5">
+            <div className="w-full md:w-1/2 mb-4 md:mb-0 md:mr-5">
+              <Image src="/images/profile_1.png" alt="Profile Img" width="500" height="500" className="rounded-md" />
+            </div>
+            <div className="w-full md:w-1/2 text-2xl text-gray-700">
+              <p>
+                Hello! I am Jirayu Saengwannakool, also known as Bank. Specializing in backend
+                development, I leverage Node.js and MongoDB to create robust, efficient solutions.
+                Recently, I have been practicing my skills, interesting in skills in Full Stack
+                development to extend my expertise into frontend development with React and Tailwind
+                CSS. Join me on my journey as I continue to push the boundaries of my technical
+                knowledge and skillset.
+              </p>
             </div>
           </div>
         </div>
