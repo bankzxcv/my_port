@@ -1,11 +1,9 @@
 "use client"
 
-import { useEffect, useState } from "react"
-
-import { Alert } from "flowbite-react"
-import EDUS from "./constants/edus"
-import EXPS from "./constants/exps"
+import EDUS from "../constants/EDUS"
+import EXPS from "../constants/EXPS"
 import Image from "next/image"
+import { useState } from "react"
 
 export default function Home() {
   const [openMenu, setOpenMenu] = useState(false)
