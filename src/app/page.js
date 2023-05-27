@@ -9,10 +9,12 @@ import { useState } from "react"
 export default function Home() {
   const [openMenu, setOpenMenu] = useState(false)
   return (
-    <main>
+    <main id="home">
       <nav className="md:sticky md:top-0 md:z-50 flex items-center justify-between flex-wrap bg-gray-800 p-6">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
-          <span className="font-semibold text-xl tracking-tight">Portfolio</span>
+          <Link to="home" spy smooth>
+            <span className="font-semibold text-xl tracking-tight">Portfolio</span>
+          </Link>
         </div>
         <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
           <div className="lg:flex-grow"></div>
