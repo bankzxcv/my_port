@@ -3,29 +3,32 @@
 import EDUS from "../constants/EDUS"
 import EXPS from "../constants/EXPS"
 import Image from "next/image"
+import { Link } from "react-scroll"
 import { useState } from "react"
 
 export default function Home() {
   const [openMenu, setOpenMenu] = useState(false)
   return (
     <main>
-      <nav className="flex items-center justify-between flex-wrap bg-gray-800 p-6">
+      <nav className="md:sticky md:top-0 md:z-50 flex items-center justify-between flex-wrap bg-gray-800 p-6">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <span className="font-semibold text-xl tracking-tight">Portfolio</span>
         </div>
         <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
           <div className="lg:flex-grow"></div>
           <div className="text-sm lg:flex-grow lg:flex min-[320]:flex-col">
-            {["Home", "Experiences", "Skills", "Education", "Projects", "Contact"].map(item => {
-              const link = `#${item.toLowerCase()}`
+            {["Home", "Experiences", "Skills", "Education", "Contact"].map(item => {
+              const link = `${item.toLowerCase()}`
               return (
-                <a
+                <Link
                   key={item}
-                  href={link}
+                  to={link}
+                  spy
                   className=" mt-4  lg:mt-0 text-gray-200 hover:text-white mr-4 flex justify-end"
+                  smooth
                 >
                   {item}
-                </a>
+                </Link>
               )
             })}
           </div>
@@ -36,7 +39,13 @@ export default function Home() {
           <div className="text-6xl font-bold">Hello</div>
           <div className="mt-8 flex flex-col md:flex-row justify-between p-5">
             <div className="w-full md:w-1/2 mb-4 md:mb-0 md:mr-5">
-              <Image src="/images/profile_1.png" alt="Profile Img" width="500" height="500" className="rounded-md" />
+              <Image
+                src="/images/profile_1.png"
+                alt="Profile Img"
+                width="500"
+                height="500"
+                className="rounded-md"
+              />
             </div>
             <div className="w-full md:w-1/2 text-2xl text-gray-700">
               <p>
@@ -52,7 +61,9 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center justify-center my-16">
-          <div className="text-6xl font-bold mb-8">Experiences</div>
+          <div id="experiences" className="text-6xl font-bold mb-8">
+            Experiences
+          </div>
           <div>
             <ol className="relative border-l border-gray-200 dark:border-gray-700 divide-y">
               {EXPS.map(({ date, title, company, description }, i) => (
@@ -76,7 +87,9 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center my-16">
-          <div className="text-6xl font-bold mb-8">Skills</div>
+          <div id="skills" className="text-6xl font-bold mb-8">
+            Skills
+          </div>
           <div className="divide-y">
             <div className="text-2xl flex flex-row my-2">
               <div className="font-bold mx-2">Tech Skills:</div>
@@ -103,7 +116,9 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center my-16">
-          <div className="text-6xl font-bold mb-8">Education</div>
+          <div id="education" className="text-6xl font-bold mb-8">
+            Education
+          </div>
           <ol className="relative border-l border-gray-200 dark:border-gray-700 divide-y">
             {EDUS.map(({ date, department, school, description }, i) => (
               <li className="mb-10 ml-4 pt-6" key={i}>
@@ -132,7 +147,9 @@ export default function Home() {
           <div className="text-2xl">I am a software engineer</div>
         </div> */}
         <div className="flex flex-col items-center justify-center my-16">
-          <div className="text-6xl font-bold mb-8">Contact</div>
+          <div id="contact" className="text-6xl font-bold mb-8">
+            Contact
+          </div>
           <div className="flex flex-col justify-center my-4">
             <div className="text-2xl">Blog: https://medium.com/@bankzxcv (Thai Blog)</div>
             <div className="text-2xl">Github: https://github.com/bankzxcv</div>
