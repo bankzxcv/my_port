@@ -97,7 +97,7 @@ export default function Home() {
               <div className="font-bold mx-2">Tech Skills:</div>
               <div className="mx-4" />
               <div className="text-gray-700">
-                Node.js, MongoDB, Docker, ElasticSearch, RabbitMQ, React, Svelte, TCP/IP,
+                Node.js, MongoDB, Docker, ElasticSearch, RabbitMQ, React, Svelte, MVC Pattern, TCP/IP,
                 CCNA(Network and Data Center), Network Engineering, Linux
               </div>
             </div>

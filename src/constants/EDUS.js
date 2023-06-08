@@ -6,7 +6,9 @@ const EDUS = [
     description: `CS261 Data Structures (Using C language)
     CS321 Theory of Computation
     CS325 Analysis of Algorithms (Python)
-    AI536 Probabilistic Bayesian Model`,
+    AI536 Probabilistic Bayesian Model
+    CS572 Computer Architecture
+    CS575 Parallel Programming`,
   },
   {
     date: "May 2010 - 2013",
