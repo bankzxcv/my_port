@@ -1,14 +1,9 @@
 const EDUS = [
   {
-    date: "September 2022 - present",
-    department: "Pursuing Master's degree, COMPUTER SCIENCE",
+    date: "September 2022 - June 2024 (expected)",
+    department: "Master's degree, COMPUTER SCIENCE",
     school: "Oregon State University",
-    description: `CS261 Data Structures (Using C language)
-    CS321 Theory of Computation
-    CS325 Analysis of Algorithms (Python)
-    AI536 Probabilistic Bayesian Model
-    CS572 Computer Architecture
-    CS575 Parallel Programming`,
+    description: `Software Engineering and Machine Learning focus.`,
   },
   {
     date: "May 2010 - 2013",

@@ -1,5 +1,12 @@
 const EXPS = [
   {
+    date: " Aug 2023 - Dec 2022",
+    title: "Software Engineer (Remote)",
+    company: "TT Software Solutions",
+    description: `- Set up CI/CD pipeline for building web application process on Azure Cloud as an app service by GitHub Action.
+    - Collaborate with the development team to optimize infrastructure, improve automation and set up deployment processes with service principles.`,
+  },
+  {
     date: " June 2019 - Dec 2022",
     title: "Software Engineer",
     company: "Command See (Thailand)",
