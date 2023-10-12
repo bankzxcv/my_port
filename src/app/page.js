@@ -63,11 +63,11 @@ export default function Home() {
             <div className="w-full md:w-1/2 md:text-4xl sm:text-l text-gray-700" data-aos="flip-up">
               <p className="font-bold">Hi Guys,</p> <br />
               <p>
-                A Software Engineer with 5+ years of experience in software development, systems and
+                I am a Software Engineer with 5+ years of experience in software development, systems and
                 enjoy working in a various environments.
               </p>
               <p>
-                Enjoy learning new technologies and solving problems. I am a fast learner and
+                Enjoy learning new technologies, how software architecture works and how to make it better.
               </p>
             </div>
           </div>
