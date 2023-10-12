@@ -63,11 +63,12 @@ export default function Home() {
             <div className="w-full md:w-1/2 md:text-4xl sm:text-l text-gray-700" data-aos="flip-up">
               <p className="font-bold">Hi Guys,</p> <br />
               <p>
-                I am a Software Engineer with 5+ years of experience in software development, systems and
-                enjoy working in a various environments.
+                I am a Software Engineer with 5+ years of experience in software development,
+                systems and enjoy working in a various environments.
               </p>
               <p>
-                Enjoy learning new technologies, how software architecture works and how to make it better.
+                Enjoy learning new technologies, how software architecture works and how to make it
+                better.
               </p>
             </div>
           </div>
@@ -164,16 +165,16 @@ export default function Home() {
             Contact
           </div>
           <div className="flex flex-col justify-center items-center my-4 mb-4">
-            <div className="text-2xl">
+            <div className="md:text-2xl sm:text-xl">
               <a href="https://linkedin.com/in/jirayusaeng">LinkedIn</a>
             </div>
-            <div className="text-2xl">
+            <div className="md:text-2xl sm:text-xl">
               <a href="https://medium.com/@bankzxcv">Medium Blog (Thai Content)</a>
             </div>
-            <div className="text-2xl">
+            <div className="md:text-2xl sm:text-xl">
               <a href="https://github.com/bankzxcv">Github</a>
             </div>
-            <div className="text-2xl">Email: jirayu.saeng@gmail.com</div>
+            <div className="md:text-2xl sm:text-xl">Email: jirayu.saeng@gmail.com</div>
             <div></div>
           </div>
         </div>
