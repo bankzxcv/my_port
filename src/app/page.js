@@ -9,6 +9,7 @@ import { useEffect, useState } from "react"
 import AOS from "aos"
 import EDUS from "../constants/EDUS"
 import EXPS from "../constants/EXPS"
+import Headers from "@/components/header"
 import Image from "next/image"
 import { Link } from "react-scroll"
 
@@ -21,6 +22,7 @@ export default function Home() {
   }, [])
   return (
     <main id="home">
+      <Headers />
       <div className="flex flex-col items-center mx-16">
         <div className="flex flex-col items-center justify-center my-16">
           <div data-aos="fade-right" className="text-6xl font-bold">
@@ -28,13 +30,13 @@ export default function Home() {
           </div>
           <div className="mt-8 flex flex-col md:flex-row justify-between p-5">
             <div className="w-full md:w-1/2 mb-4 md:mb-0 md:mr-5" data-aos="flip-up">
-              <Card className="rounded-lg overflow-hidden shadow-lg max-w-sm mx-auto flex flex-col justify-center items-center">
+              <Card className="rounded-lg overflow-hidden shadow-lg max-w-sm mx-auto">
                 <Image
                   src="/images/profile_1.png"
                   alt="Profile Img"
                   width="320"
                   height="320"
-                  className="rounded-xl pt-2"
+                  className="max-w-full h-auto mx-auto"
                 />
                 <CardContent className="p-4">
                   <h2 className="text-2xl font-bold">Jirayu S</h2>
