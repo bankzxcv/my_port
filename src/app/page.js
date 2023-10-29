@@ -92,7 +92,7 @@ export default function Home() {
             Skills
           </div>
           <div className="divide-y">
-            <div className="text-2xl flex flex-row my-2" data-aos="fade-up">
+            <div className="text-lg flex flex-row my-2" data-aos="fade-up">
               <div className="font-bold mx-2">Tech Skills:</div>
               <div className="mx-4" />
               <div className="text-gray-700">
@@ -100,14 +100,14 @@ export default function Home() {
                 TCP/IP, CCNA(Network and Data Center), Network Engineering, Linux
               </div>
             </div>
-            <div className="text-2xl flex flex-row my-2" data-aos="fade-up">
+            <div className="text-lg flex flex-row my-2" data-aos="fade-up">
               <div className="font-bold mx-2">Soft Skills:</div>
               <div className="mx-4" />
               <div className="text-gray-700">
                 Agile, Scrum, Kanban, Teamwork, Communication, Problem Solving, Time Management
               </div>
             </div>
-            <div className="text-2xl flex flex-row my-2" data-aos="fade-up">
+            <div className="text-lg flex flex-row my-2" data-aos="fade-up">
               <div className="font-bold mx-2">HOBBIES:</div>
               <div className="mx-4" />
               <div className="text-gray-700">
