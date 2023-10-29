@@ -108,7 +108,7 @@ export default function Home() {
               </div>
             </div>
             <div className="text-lg flex flex-row my-2" data-aos="fade-up">
-              <div className="font-bold mx-2">HOBBIES:</div>
+              <div className="font-bold mx-2">Hobbies:</div>
               <div className="mx-4" />
               <div className="text-gray-700">
                 Working Out, JP Anime, Korean TV Series, American TV Series, Cooking
