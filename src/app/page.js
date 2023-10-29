@@ -2,6 +2,8 @@
 
 import "aos/dist/aos.css"
 
+import { Card, CardContent } from "@/components/ui/card"
+// import { Button } from "@/components/ui/button"
 import { useEffect, useState } from "react"
 
 import AOS from "aos"
@@ -19,32 +21,6 @@ export default function Home() {
   }, [])
   return (
     <main id="home">
-      {/* <nav className="md:sticky md:top-0 md:z-50 flex items-center justify-between flex-wrap bg-gray-800 p-6">
-        <div className="flex items-center flex-shrink-0 text-white mr-6">
-          <Link to="home" spy smooth>
-            <span className="font-semibold text-xl tracking-tight">Portfolio</span>
-          </Link>
-        </div>
-        <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-          <div className="lg:flex-grow"></div>
-          <div className="text-sm lg:flex-grow lg:flex min-[320]:flex-col">
-            {["Home", "Experiences", "Skills", "Education", "Contact"].map(item => {
-              const link = `${item.toLowerCase()}`
-              return (
-                <Link
-                  key={item}
-                  to={link}
-                  spy
-                  className="mt-4 lg:mt-0 text-gray-200 hover:text-white mr-4 flex justify-end gap-2"
-                  smooth
-                >
-                  {item}
-                </Link>
-              )
-            })}
-          </div>
-        </div>
-      </nav> */}
       <div className="flex flex-col items-center mx-16">
         <div className="flex flex-col items-center justify-center my-16">
           <div data-aos="fade-right" className="text-6xl font-bold">
@@ -52,13 +28,22 @@ export default function Home() {
           </div>
           <div className="mt-8 flex flex-col md:flex-row justify-between p-5">
             <div className="w-full md:w-1/2 mb-4 md:mb-0 md:mr-5" data-aos="flip-up">
-              <Image
-                src="/images/profile_1.png"
-                alt="Profile Img"
-                width="500"
-                height="500"
-                className="rounded-xl"
-              />
+              <Card className="rounded-lg overflow-hidden shadow-lg max-w-sm mx-auto flex flex-col justify-center items-center">
+                <Image
+                  src="/images/profile_1.png"
+                  alt="Profile Img"
+                  width="320"
+                  height="320"
+                  className="rounded-xl pt-2"
+                />
+                <CardContent className="p-4">
+                  <h2 className="text-2xl font-bold">Jirayu S</h2>
+                  <h3 className="text-gray-500">Software Developer</h3>
+                  <p className="mt-2 text-gray-600">
+                    Passionate about creating software and learning new technologies.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
             <div className="w-full md:w-1/2 md:text-4xl sm:text-l text-gray-700" data-aos="flip-up">
               <p className="font-bold">Hi Guys,</p> <br />
