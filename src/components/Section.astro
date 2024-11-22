@@ -1,0 +1,53 @@
+---
+interface Props {
+    title: string;
+    id: string;
+}
+
+const { title, id } = Astro.props;
+---
+
+<section id={id} class="py-16 relative" data-aos="fade-up">
+    <div class="absolute -inset-2 bg-gradient-to-r from-sky-400/20 via-indigo-400/20 to-purple-400/20 rounded-lg blur-lg"></div>
+    <div class="relative">
+        <h2 class="text-3xl font-bold mb-8 text-gray-800 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
+            {title}
+        </h2>
+        <div class="bg-white/80 backdrop-blur-md rounded-lg shadow-lg p-8 border border-white/20 hover:shadow-xl transition-shadow duration-300">
+            <slot />
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        position: relative;
+        z-index: 1;
+    }
+    
+    section::before {
+        content: '';
+        position: absolute;
+        top: 2rem;
+        left: -1rem;
+        width: 3rem;
+        height: 3rem;
+        background: linear-gradient(45deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
+        border-radius: 0.5rem;
+        transform: rotate(-45deg);
+        z-index: -1;
+    }
+    
+    section::after {
+        content: '';
+        position: absolute;
+        bottom: 2rem;
+        right: -1rem;
+        width: 2rem;
+        height: 2rem;
+        background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1));
+        border-radius: 0.5rem;
+        transform: rotate(30deg);
+        z-index: -1;
+    }
+</style>
