@@ -1,0 +1,120 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "slug": "building-scalable-microservices",
+      "title": "Building Scalable Microservices with Node.js and Kubernetes",
+      "excerpt": "Learn how to architect, build, and deploy microservices that handle millions of requests using modern cloud-native technologies.",
+      "content": "<div class='space-y-6'><p class='text-lg leading-relaxed'>In today's cloud-first world, microservices architecture has become the de facto standard for building scalable applications. This guide will walk you through the essential concepts and best practices.</p><h2 class='text-3xl font-bold mt-8 mb-4'>Why Microservices?</h2><p>Microservices architecture offers several key advantages:</p><ul class='list-disc ml-6 space-y-2'><li>Independent deployment and scaling</li><li>Technology diversity and flexibility</li><li>Improved fault isolation</li><li>Better team organization and autonomy</li></ul><h2 class='text-3xl font-bold mt-8 mb-4'>Key Technologies</h2><p>For this architecture, we'll leverage:</p><ul class='list-disc ml-6 space-y-2'><li><strong>Node.js</strong> - Fast, event-driven runtime for services</li><li><strong>Kubernetes</strong> - Container orchestration at scale</li><li><strong>Docker</strong> - Containerization for consistency</li><li><strong>Redis</strong> - Caching and message queuing</li><li><strong>MongoDB</strong> - Flexible document storage</li></ul><h2 class='text-3xl font-bold mt-8 mb-4'>Best Practices</h2><p>When building microservices, always remember:</p><ol class='list-decimal ml-6 space-y-2'><li>Design for failure - implement circuit breakers and retries</li><li>Use API gateways for routing and security</li><li>Implement comprehensive logging and monitoring</li><li>Automate everything with CI/CD pipelines</li><li>Keep services small and focused on single responsibilities</li></ol><h2 class='text-3xl font-bold mt-8 mb-4'>Conclusion</h2><p>Microservices architecture, when done right, can dramatically improve your application's scalability, maintainability, and resilience. Start small, iterate, and always keep monitoring your services.</p></div>",
+      "author": {
+        "name": "Jirayu Saengwannakool",
+        "email": "jirayu.saeng@gmail.com",
+        "avatar": "/images/profile_picture.png"
+      },
+      "publishedDate": "2025-11-10T10:00:00Z",
+      "updatedDate": "2025-11-10T10:00:00Z",
+      "featured": true,
+      "featuredImage": {
+        "url": "/images/blog/microservices.jpg",
+        "alt": "Kubernetes cluster architecture diagram",
+        "width": 1200,
+        "height": 630
+      },
+      "tags": ["microservices", "nodejs", "kubernetes", "devops"],
+      "category": "Software Architecture",
+      "readTime": 12,
+      "seo": {
+        "metaTitle": "Building Scalable Microservices with Node.js | Jirayu's Blog",
+        "metaDescription": "A comprehensive guide to building scalable microservices using Node.js, Docker, and Kubernetes. Learn best practices and patterns.",
+        "keywords": ["microservices", "nodejs", "kubernetes", "scalability", "docker", "devops"],
+        "ogImage": "/images/blog/microservices.jpg"
+      },
+      "published": true
+    },
+    {
+      "id": "2",
+      "slug": "optimizing-react-performance",
+      "title": "Advanced React Performance Optimization Techniques",
+      "excerpt": "Deep dive into React performance optimization including memoization, code splitting, and lazy loading strategies.",
+      "content": "<div class='space-y-6'><p class='text-lg leading-relaxed'>Performance is critical for user experience. In this guide, we'll explore advanced techniques to make your React applications lightning fast.</p><h2 class='text-3xl font-bold mt-8 mb-4'>Understanding React Performance</h2><p>React is fast by default, but as applications grow, performance bottlenecks can emerge. The key is understanding when and why React re-renders components.</p><h2 class='text-3xl font-bold mt-8 mb-4'>Optimization Techniques</h2><h3 class='text-2xl font-semibold mt-6 mb-3'>1. Memoization</h3><p>Use <code>React.memo()</code>, <code>useMemo()</code>, and <code>useCallback()</code> to prevent unnecessary re-renders:</p><pre class='bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4'><code>const MemoizedComponent = React.memo(({ data }) => {\n  return <div>{data}</div>;\n});\n\nconst ExpensiveCalculation = ({ items }) => {\n  const total = useMemo(() => {\n    return items.reduce((sum, item) => sum + item.price, 0);\n  }, [items]);\n  \n  return <div>Total: {total}</div>;\n};</code></pre><h3 class='text-2xl font-semibold mt-6 mb-3'>2. Code Splitting</h3><p>Split your bundle using dynamic imports and React.lazy():</p><pre class='bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4'><code>const LazyComponent = React.lazy(() => import('./HeavyComponent'));\n\nfunction App() {\n  return (\n    <Suspense fallback={<div>Loading...</div>}>\n      <LazyComponent />\n    </Suspense>\n  );\n}</code></pre><h3 class='text-2xl font-semibold mt-6 mb-3'>3. Virtualization</h3><p>For long lists, use virtualization libraries like react-window or react-virtualized to render only visible items.</p><h2 class='text-3xl font-bold mt-8 mb-4'>Performance Monitoring</h2><p>Always measure performance with React DevTools Profiler and Chrome DevTools to identify real bottlenecks before optimizing.</p></div>",
+      "author": {
+        "name": "Jirayu Saengwannakool",
+        "email": "jirayu.saeng@gmail.com",
+        "avatar": "/images/profile_picture.png"
+      },
+      "publishedDate": "2025-11-05T14:30:00Z",
+      "updatedDate": "2025-11-05T14:30:00Z",
+      "featured": false,
+      "featuredImage": {
+        "url": "/images/blog/react-performance.jpg",
+        "alt": "React performance optimization diagram",
+        "width": 1200,
+        "height": 630
+      },
+      "tags": ["react", "performance", "frontend", "javascript"],
+      "category": "Frontend Development",
+      "readTime": 8,
+      "seo": {
+        "metaTitle": "Advanced React Performance Optimization | Jirayu's Blog",
+        "metaDescription": "Learn advanced techniques to optimize React application performance including memoization, code splitting, and more.",
+        "keywords": ["react", "performance", "optimization", "frontend", "javascript"],
+        "ogImage": "/images/blog/react-performance.jpg"
+      },
+      "published": true
+    },
+    {
+      "id": "3",
+      "slug": "kubernetes-deployment-strategies",
+      "title": "Kubernetes Deployment Strategies: Rolling, Blue-Green, and Canary",
+      "excerpt": "Compare different Kubernetes deployment strategies and learn when to use each approach for zero-downtime deployments.",
+      "content": "<div class='space-y-6'><p class='text-lg leading-relaxed'>Choosing the right deployment strategy is crucial for maintaining high availability while shipping new features. Let's explore the main strategies available in Kubernetes.</p><h2 class='text-3xl font-bold mt-8 mb-4'>Rolling Deployments</h2><p>The default Kubernetes strategy. Gradually replaces old pods with new ones:</p><ul class='list-disc ml-6 space-y-2'><li><strong>Pros:</strong> Simple, resource-efficient, automatic rollback</li><li><strong>Cons:</strong> Slower rollout, version mixing during deployment</li><li><strong>Use when:</strong> Standard updates with backward compatibility</li></ul><h2 class='text-3xl font-bold mt-8 mb-4'>Blue-Green Deployments</h2><p>Maintains two identical environments. Switch traffic all at once:</p><ul class='list-disc ml-6 space-y-2'><li><strong>Pros:</strong> Instant rollback, easy testing, no version mixing</li><li><strong>Cons:</strong> Requires double resources, database migration challenges</li><li><strong>Use when:</strong> Critical updates requiring instant rollback capability</li></ul><h2 class='text-3xl font-bold mt-8 mb-4'>Canary Deployments</h2><p>Gradually shift traffic to new version while monitoring metrics:</p><ul class='list-disc ml-6 space-y-2'><li><strong>Pros:</strong> Risk mitigation, real-world testing, gradual rollout</li><li><strong>Cons:</strong> Complex setup, requires monitoring, longer deployment time</li><li><strong>Use when:</strong> High-risk changes or testing new features with real users</li></ul><h2 class='text-3xl font-bold mt-8 mb-4'>Implementation Example</h2><pre class='bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4'><code>apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: my-app\nspec:\n  replicas: 3\n  strategy:\n    type: RollingUpdate\n    rollingUpdate:\n      maxSurge: 1\n      maxUnavailable: 0\n  template:\n    spec:\n      containers:\n      - name: app\n        image: myapp:v2</code></pre><h2 class='text-3xl font-bold mt-8 mb-4'>Best Practices</h2><ol class='list-decimal ml-6 space-y-2'><li>Always implement health checks (readiness and liveness probes)</li><li>Monitor metrics during deployments</li><li>Automate rollback based on error rates</li><li>Test in staging with same strategy</li><li>Document rollback procedures</li></ol></div>",
+      "author": {
+        "name": "Jirayu Saengwannakool",
+        "email": "jirayu.saeng@gmail.com",
+        "avatar": "/images/profile_picture.png"
+      },
+      "publishedDate": "2025-10-28T09:00:00Z",
+      "updatedDate": "2025-10-28T09:00:00Z",
+      "featured": false,
+      "featuredImage": {
+        "url": "/images/blog/kubernetes-deployment.jpg",
+        "alt": "Kubernetes deployment strategies comparison",
+        "width": 1200,
+        "height": 630
+      },
+      "tags": ["kubernetes", "devops", "deployment", "cloud"],
+      "category": "DevOps",
+      "readTime": 10,
+      "seo": {
+        "metaTitle": "Kubernetes Deployment Strategies Guide | Jirayu's Blog",
+        "metaDescription": "Learn about Rolling, Blue-Green, and Canary deployment strategies in Kubernetes for zero-downtime deployments.",
+        "keywords": ["kubernetes", "deployment", "devops", "blue-green", "canary", "rolling"],
+        "ogImage": "/images/blog/kubernetes-deployment.jpg"
+      },
+      "published": true
+    }
+  ],
+  "categories": [
+    {
+      "id": "software-architecture",
+      "name": "Software Architecture",
+      "slug": "software-architecture",
+      "description": "System design, architecture patterns, and best practices",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "frontend-development",
+      "name": "Frontend Development",
+      "slug": "frontend-development",
+      "description": "React, Next.js, and modern frontend technologies",
+      "color": "#10b981"
+    },
+    {
+      "id": "devops",
+      "name": "DevOps",
+      "slug": "devops",
+      "description": "CI/CD, containerization, and cloud infrastructure",
+      "color": "#f59e0b"
+    }
+  ]
+}

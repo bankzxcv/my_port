@@ -1,0 +1,39 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grad3)"/>
+
+  <!-- Kubernetes wheel -->
+  <circle cx="600" cy="280" r="120" fill="none" stroke="white" stroke-width="8" opacity="0.8"/>
+  <g opacity="0.9">
+    <polygon points="600,160 620,230 600,220 580,230" fill="white"/>
+    <polygon points="720,280 650,260 660,280 650,300" fill="white"/>
+    <polygon points="600,400 580,330 600,340 620,330" fill="white"/>
+    <polygon points="480,280 550,300 540,280 550,260" fill="white"/>
+    <polygon points="680,200 620,250 630,240 610,230" fill="white"/>
+    <polygon points="680,360 620,310 630,320 610,330" fill="white"/>
+    <polygon points="520,360 580,310 570,320 590,330" fill="white"/>
+    <polygon points="520,200 580,250 570,240 590,230" fill="white"/>
+  </g>
+  <circle cx="600" cy="280" r="30" fill="white"/>
+
+  <!-- Deployment arrows -->
+  <g opacity="0.7">
+    <polygon points="200,450 250,450 225,490" fill="white"/>
+    <polygon points="400,450 450,450 425,490" fill="white"/>
+    <polygon points="750,450 800,450 775,490" fill="white"/>
+    <polygon points="950,450 1000,450 975,490" fill="white"/>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="560" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">
+    Kubernetes Deployment
+  </text>
+  <text x="600" y="600" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" opacity="0.9">
+    Rolling, Blue-Green, Canary
+  </text>
+</svg>
