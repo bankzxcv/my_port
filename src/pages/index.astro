@@ -44,29 +44,29 @@ import ProfilePicture from '../components/ProfilePicture.astro';
 		/>
 	</div>
 
-	<ParallaxSection 
-		title="Technical Skills" 
+	<ParallaxSection
+		title="Technical Skills"
 		id="skills"
 		bgImage="/images/skills-bg.svg"
 	>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 			<div>
-				<h3 class="font-semibold mb-2">Languages & Core Skills</h3>
-				<p>HTML/CSS, JavaScript, C/C++, Golang, API, Node.js, TypeScript, Java/Kotlin</p>
+				<h3 class="font-semibold mb-2">Languages</h3>
+				<p>JavaScript, TypeScript, Golang, Java, Kotlin, C/C++, Python</p>
 			</div>
 			<div>
-				<h3 class="font-semibold mb-2">Frameworks & Systems</h3>
-				<p>React, Svelte, SQL, MongoDB, Material-UI, ElasticSearch, Docker, Kubernetes, Terraform, GitHub Action, RESTful APIs, GraphQL, NestJS</p>
+				<h3 class="font-semibold mb-2">Frameworks & Databases</h3>
+				<p>React, Next.js, NestJS, Node.js, GraphQL, MongoDB, SQL, Redis, ElasticSearch</p>
 			</div>
 			<div>
-				<h3 class="font-semibold mb-2">Other Technical Skills</h3>
-				<p>Git, Agile Development, Test-Driven Development, AWS, Azure, Linux/Unix, Bash Shell Scripting</p>
+				<h3 class="font-semibold mb-2">DevOps & Cloud</h3>
+				<p>Docker, Kubernetes, Terraform, GitHub Actions, AWS, Azure, Linux/Unix</p>
 			</div>
 		</div>
 	</ParallaxSection>
 
-	<ParallaxSection 
-		title="Work Experience" 
+	<ParallaxSection
+		title="Work Experience"
 		id="experience"
 		bgImage="/images/experience-bg.svg"
 	>
@@ -76,11 +76,11 @@ import ProfilePicture from '../components/ProfilePicture.astro';
 					<h3 class="text-xl font-semibold">TT Software Solution</h3>
 					<span class="text-gray-600">2023 - Present</span>
 				</div>
-				<p class="text-lg font-medium mb-2">Software Engineer</p>
+				<p class="text-lg font-medium text-gray-800 mb-3">Software Engineer</p>
 				<ul class="list-disc list-inside space-y-2 text-gray-700">
-					<li>Established CI/CD pipeline on Azure Cloud using GitHub Actions, reducing deployment times by 50%</li>
-					<li>Developed scalable back-office service using Next.js and Material-UI</li>
-					<li>Implemented infrastructure-as-code with Terraform for Azure Cloud resources</li>
+					<li>Architected and deployed CI/CD pipeline on Azure Cloud with GitHub Actions, reducing deployment time by 50%</li>
+					<li>Engineered scalable back-office platform using Next.js and Material-UI</li>
+					<li>Automated infrastructure provisioning with Terraform for Azure cloud resources</li>
 				</ul>
 			</div>
 
@@ -89,98 +89,106 @@ import ProfilePicture from '../components/ProfilePicture.astro';
 					<h3 class="text-xl font-semibold">Command See, LTD</h3>
 					<span class="text-gray-600">2019 - 2022</span>
 				</div>
-				<p class="text-lg font-medium mb-2">Full-Stack Software Engineer</p>
+				<p class="text-lg font-medium text-gray-800 mb-3">Full-Stack Software Engineer</p>
 				<ul class="list-disc list-inside space-y-2 text-gray-700">
-					<li>Implemented efficient web scraping service reducing network latency by 70%</li>
-					<li>Built analytics dashboard using GraphQL and Next.js</li>
-					<li>Containerized legacy Node.js applications and migrated to Kubernetes</li>
-					<li>Created high-availability microservices serving 10,000+ concurrent users</li>
+					<li>Optimized web scraping service architecture, reducing network latency by 70%</li>
+					<li>Designed and launched analytics dashboard with GraphQL and Next.js</li>
+					<li>Modernized legacy Node.js applications through containerization and Kubernetes migration</li>
+					<li>Delivered high-availability microservices architecture supporting 10,000+ concurrent users</li>
 				</ul>
 			</div>
 
 			<div>
 				<div class="flex justify-between items-start mb-2">
-					<h3 class="text-xl font-semibold">IBG Company (Zanroo Company)</h3>
+					<h3 class="text-xl font-semibold">IBG Company (Zanroo)</h3>
 					<span class="text-gray-600">2016 - 2018</span>
 				</div>
-				<p class="text-lg font-medium mb-2">Backend Software Engineer</p>
+				<p class="text-lg font-medium text-gray-800 mb-3">Backend Software Engineer</p>
 				<ul class="list-disc list-inside space-y-2 text-gray-700">
-					<li>Developed 'Influencer List' project using MeteorJS and React.JS</li>
-					<li>Implemented real-time LINE messaging channel managing 10,000+ daily interactions</li>
-					<li>Built RESTful API Microservices processing terabyte-scale data</li>
+					<li>Built influencer marketing platform using MeteorJS and React</li>
+					<li>Developed real-time LINE messaging system handling 10,000+ daily interactions</li>
+					<li>Created RESTful microservices architecture for terabyte-scale data processing</li>
 				</ul>
 			</div>
 		</div>
 	</ParallaxSection>
 
-	<ParallaxSection 
-		title="Education" 
+	<ParallaxSection
+		title="Education"
 		id="education"
 		bgImage="/images/education-bg.svg"
 	>
-		<div class="space-y-4">
+		<div class="space-y-6">
 			<div>
-				<div class="flex justify-between items-start">
+				<div class="flex justify-between items-start mb-2">
 					<h3 class="text-xl font-semibold">Oregon State University</h3>
 					<span class="text-gray-600">2024</span>
 				</div>
-				<p>Master of Engineering, Major in Computer Science</p>
+				<p class="text-lg text-gray-800">Master of Engineering in Computer Science</p>
 				<p class="text-gray-600">Corvallis, OR</p>
 			</div>
 
 			<div>
-				<div class="flex justify-between items-start">
+				<div class="flex justify-between items-start mb-2">
 					<h3 class="text-xl font-semibold">Khon Kaen University</h3>
 					<span class="text-gray-600">2014</span>
 				</div>
-				<p>Bachelor of Engineering, Major in Computer Engineering</p>
+				<p class="text-lg text-gray-800">Bachelor of Engineering in Computer Engineering</p>
 				<p class="text-gray-600">Khon Kaen, Thailand</p>
 			</div>
 		</div>
 	</ParallaxSection>
 
-	<ParallaxSection 
-		title="Projects" 
+	<ParallaxSection
+		title="Projects"
 		id="projects"
 		bgImage="/images/projects-bg.svg"
 	>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 			<div>
-				<h3 class="text-xl font-semibold mb-2">Switch Case Actions (GitHub Action)</h3>
-				<p class="text-gray-700">Developed a GitHub Action that enables switch-case functionality in workflow execution, providing a more intuitive way to handle conditional command execution.</p>
+				<h3 class="text-xl font-semibold mb-2">Switch Case Actions</h3>
+				<p class="text-gray-700">GitHub Action enabling switch-case functionality in CI/CD workflows for intuitive conditional command execution.</p>
 			</div>
 
 			<div>
 				<h3 class="text-xl font-semibold mb-2">BeaverClassHelpme</h3>
-				<p class="text-gray-700">Mobile application for OSU class availability monitoring using Kotlin, Node.js, and Supabase.</p>
+				<p class="text-gray-700">Mobile app for real-time OSU class availability monitoring built with Kotlin, Node.js, and Supabase.</p>
 			</div>
 
 			<div>
 				<h3 class="text-xl font-semibold mb-2">Tarpaulin API</h3>
-				<p class="text-gray-700">Backend infrastructure for class registration system using TypeScript, Express.js, MongoDB, Redis, and Google Kubernetes Engine.</p>
+				<p class="text-gray-700">Scalable class registration backend using TypeScript, Express.js, MongoDB, Redis, and GKE.</p>
 			</div>
 
 			<div>
 				<h3 class="text-xl font-semibold mb-2">NuanPrang</h3>
-				<p class="text-gray-700">Python-based weather analysis system using Firecrawl, LangChain, and LLM models for generating tornado alerts.</p>
+				<p class="text-gray-700">AI-powered weather analysis system generating tornado alerts using Python, LangChain, and LLM models.</p>
 			</div>
 		</div>
 	</ParallaxSection>
 
-	<ParallaxSection 
-		title="Awards & Activities" 
+	<ParallaxSection
+		title="Leadership & Recognition"
 		id="awards"
 		bgImage="/images/projects-bg.svg"
 		bgPosition="bottom"
 	>
-		<div class="space-y-6">
-			<ul class="list-disc list-inside space-y-3 text-gray-700">
-				<li>Volunteering as Treasurer at OSU Thai Student Club</li>
-				<li>5th place in national "TESA Top Gun Rally" system contest</li>
-				<li>3rd place in The Northeastern ACM ICPC THAI Regional Contest</li>
-				<li>Led 70 students as Student President of Computer Engineering Club</li>
-				<li>Organized workshop program for high school students in computer science basics</li>
-			</ul>
+		<div class="space-y-4">
+			<div>
+				<h3 class="font-semibold text-lg mb-3">Leadership</h3>
+				<ul class="list-disc list-inside space-y-2 text-gray-700">
+					<li>Treasurer, OSU Thai Student Club - Managing club finances and coordinating cultural events</li>
+					<li>Student President, Computer Engineering Club - Led 70+ students in academic initiatives</li>
+					<li>Workshop Organizer - Introduced computer science fundamentals to high school students</li>
+				</ul>
+			</div>
+			<div>
+				<h3 class="font-semibold text-lg mb-3">Awards & Achievements</h3>
+				<ul class="list-disc list-inside space-y-2 text-gray-700">
+					<li>5th Place - TESA Top Gun Rally National Systems Contest</li>
+					<li>3rd Place - Northeastern ACM ICPC Thailand Regional Contest</li>
+				</ul>
+			</div>
 		</div>
 	</ParallaxSection>
 </Layout>
