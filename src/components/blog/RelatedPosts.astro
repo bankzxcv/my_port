@@ -1,0 +1,23 @@
+---
+import type { BlogPost } from '../../lib/types';
+import { getRelatedPosts } from '../../lib/blogUtils';
+import BlogCard from './BlogCard.astro';
+
+interface Props {
+  currentPost: BlogPost;
+}
+
+const { currentPost } = Astro.props;
+const relatedPosts = getRelatedPosts(currentPost);
+---
+
+{relatedPosts.length > 0 && (
+  <section class="mt-16">
+    <h2 class="text-3xl font-bold mb-8">Related Posts</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {relatedPosts.map(post => (
+        <BlogCard post={post} />
+      ))}
+    </div>
+  </section>
+)}

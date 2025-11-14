@@ -1,0 +1,19 @@
+---
+import { getCategoryBySlug } from '../../lib/blogUtils';
+
+interface Props {
+  category: string;
+}
+
+const { category } = Astro.props;
+const categoryData = getCategoryBySlug(category.toLowerCase().replace(/\s+/g, '-'));
+const color = categoryData?.color || '#3b82f6';
+---
+
+<a
+  href={`/blog/category/${categoryData?.slug || 'uncategorized'}`}
+  class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-white hover:opacity-80 transition-opacity"
+  style={`background-color: ${color}`}
+>
+  {category}
+</a>
